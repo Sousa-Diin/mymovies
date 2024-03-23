@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #29335c;
+    --light-primary: #9ac4f8;
+    --ligthest-color: #e9ebd5;
+    --secondary-color: #774936;
+    --light-secondary: #c08972;
+}
+
+#modal-overlay {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;/*fixed*/
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    visibility: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.open, .poster {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal-background {
+    display: flex;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#modal-container {
+    z-index: 1;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color: var(--ligthest-color);
+    margin-top: 8rem;
+}
+
+#movie-title {
+/*     display: flex;
+ */    padding: 1rem  0;
+}
+
+#modal-body {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0; 
+}
+
+#movie-poster {
+    max-height: 310px;
+    border-radius: 10px;
+}
+
+#movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 290px;
+}
+
+#add-to-list {
+    border: 3px solid var(--primary-color);
+    padding: 0.3rem 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;    
+    box-shadow: 1px 1px 10px #000;
+}
+
+#add-to-list:focus, 
+#add-to-list:hover {
+    background-color: var(--primary-color);
+    color: var(--ligthest-color);
+}
